@@ -7,10 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        'space-mono': ['Space Mono', 'monospace'],
+        'lexend-deca': ['Lexend Deca', 'sans-serif'],
+      },
+      colors: {
+        'primary': 'var(--yellow-color)',
+        'dark': 'var(--dark-navy-color)',
+        'light': 'var(--white-color)',
+        'dim-grey': 'var(--dim-grey-color)',
+        'light-grey': 'var(--light-grey-color)',
+        'snow': 'var(--snow-color)',
+        'light-yellow': 'var(--light-yellow-color)',
       },
     },
   },

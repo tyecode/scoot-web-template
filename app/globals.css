@@ -1,27 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --yellow-color: #FCB72B;
+  --light-yellow-color: #FFF4DF;
+  --dark-navy-color: #495567;
+  --dim-grey-color: #939CAA;
+  --light-grey-color: #E5ECF4;
+  --snow-color: #F2F5F9;
+  --white-color: #FFFFFF;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  scroll-behavior: smooth;
+  background-color: var(--white-color);
+  color: var(--dark-navy-color);
+  width: 100%;
+}
+
+@layer base {
+  .heading-1 {
+    @apply text-dark text-[56px] font-space-mono font-bold tracking-[-2.5px] leading-[56px]; 
+  }
+  .heading-2 {
+    @apply text-dark text-[48px] font-space-mono font-bold tracking-[-2.14px] leading-[48px]; 
+  }
+  .heading-3 {
+    @apply text-dark text-[40px] font-space-mono font-bold tracking-[-1.79px] leading-[48px]; 
+  }
+  .heading-4 {
+    @apply text-dark text-[24px] font-space-mono font-bold tracking-[-1.07px] leading-[28px]; 
+  }
+  .text-style {
+    @apply text-dark text-[15px] font-lexend-deca font-normal leading-[25px];
+  }
 }
