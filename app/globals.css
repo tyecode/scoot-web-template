@@ -38,4 +38,7 @@ body {
   .text-style {
     @apply text-dark text-[15px] font-lexend-deca font-normal leading-[25px];
   }
+  .max-width {
+    @apply max-w-[1440px] mx-auto
+  }
 }

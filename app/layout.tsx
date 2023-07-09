@@ -1,5 +1,5 @@
 import './globals.css'
-import { Navbar, Footer } from '@/compoments'
+import { Navbar, Footer } from '@/components'
 
 export const metadata = {
   title: 'Scoot',
