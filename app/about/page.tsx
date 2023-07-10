@@ -1,9 +1,10 @@
+import { AboutLandingPage } from '@/components/aboutSectionPage'
 import React from 'react'
 
 const About = () => {
   return (
     <div>
-      <h1>About</h1>
+      <AboutLandingPage />
     </div>
   )
 }
