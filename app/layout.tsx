@@ -1,5 +1,5 @@
 import './globals.css'
-import { Navbar, Footer } from '@/compoments'
+import { Navbar, Footer } from '@/components'
 
 export const metadata = {
   title: 'Scoot',
@@ -11,9 +11,7 @@ export const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="en">
       <body>
         <Navbar />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

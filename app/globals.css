@@ -6,13 +6,13 @@
 @tailwind utilities;
 
 :root {
-  --yellow-color: #FCB72B;
-  --light-yellow-color: #FFF4DF;
+  --yellow-color: #fcb72b;
+  --light-yellow-color: #fff4df;
   --dark-navy-color: #495567;
-  --dim-grey-color: #939CAA;
-  --light-grey-color: #E5ECF4;
-  --snow-color: #F2F5F9;
-  --white-color: #FFFFFF;
+  --dim-grey-color: #939caa;
+  --light-grey-color: #e5ecf4;
+  --snow-color: #f2f5f9;
+  --white-color: #ffffff;
 }
 
 body {
@@ -24,16 +24,16 @@ body {
 
 @layer base {
   .heading-1 {
-    @apply text-dark text-[56px] font-space-mono font-bold tracking-[-2.5px] leading-[56px]; 
+    @apply text-dark text-[56px] font-space-mono font-bold tracking-[-2.5px] leading-[56px];
   }
   .heading-2 {
-    @apply text-dark text-[48px] font-space-mono font-bold tracking-[-2.14px] leading-[48px]; 
+    @apply text-dark text-[48px] font-space-mono font-bold tracking-[-2.14px] leading-[48px];
   }
   .heading-3 {
-    @apply text-dark text-[40px] font-space-mono font-bold tracking-[-1.79px] leading-[48px]; 
+    @apply text-dark text-[40px] font-space-mono font-bold tracking-[-1.79px] leading-[48px];
   }
   .heading-4 {
-    @apply text-dark text-[24px] font-space-mono font-bold tracking-[-1.07px] leading-[28px]; 
+    @apply text-dark text-[24px] font-space-mono font-bold tracking-[-1.07px] leading-[28px];
   }
   .text-style {
     @apply text-dark text-[15px] font-lexend-deca font-normal leading-[25px];
