@@ -29,34 +29,34 @@ img {
 
 @layer base {
   .heading-1 {
-    @apply text-dark-navy text-[56px] font-space-mono font-bold tracking-[-2.5px] leading-[56px];
+    @apply font-space-mono text-[56px] font-bold leading-[56px] tracking-[-2.5px] text-dark-navy;
   }
   .heading-2 {
-    @apply text-dark-navy text-[48px] font-space-mono font-bold tracking-[-2.14px] leading-[48px];
+    @apply font-space-mono text-[48px] font-bold leading-[48px] tracking-[-2.14px] text-dark-navy;
   }
   .heading-3 {
-    @apply text-dark-navy text-[40px] font-space-mono font-bold tracking-[-1.79px] leading-[48px];
+    @apply font-space-mono text-[40px] font-bold leading-[48px] tracking-[-1.79px] text-dark-navy;
   }
   .heading-4 {
-    @apply text-dark-navy text-[24px] font-space-mono font-bold tracking-[-1.07px] leading-[28px];
+    @apply font-space-mono text-[24px] font-bold leading-[28px] tracking-[-1.07px] text-dark-navy;
   }
   .text-style {
-    @apply text-dim-grey text-[15px] font-lexend-deca font-normal leading-[25px];
+    @apply font-lexend-deca text-[15px] font-normal leading-[25px] text-dim-grey;
   }
 
   .container {
-    @apply lg:!max-w-7xl !max-w-full px-12 mx-auto;
+    @apply mx-auto !max-w-full px-12 lg:!max-w-7xl;
   }
   .flex-center {
-    @apply flex justify-center items-center;
+    @apply flex items-center justify-center;
   }
   .flex-start {
-    @apply flex justify-start items-start;
+    @apply flex items-start justify-start;
   }
   .flex-end {
-    @apply flex justify-end items-end;
+    @apply flex items-end justify-end;
   }
   .flex-between {
-    @apply flex justify-between items-center;
+    @apply flex items-center justify-between;
   }
 }
