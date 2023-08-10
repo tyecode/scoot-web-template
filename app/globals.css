@@ -8,11 +8,12 @@
 :root {
   --yellow-color: #fcb72b;
   --light-yellow-color: #fff4df;
+  --dark-color: #333a44;
   --dark-navy-color: #495567;
   --dim-grey-color: #939caa;
   --light-grey-color: #e5ecf4;
   --snow-color: #f2f5f9;
-  --white-color: #ffffff;
+  --light-color: #ffffff;
 }
 
 body {
@@ -22,20 +23,40 @@ body {
   width: 100%;
 }
 
+img {
+  pointer-events: none;
+}
+
 @layer base {
   .heading-1 {
-    @apply text-dark text-[56px] font-space-mono font-bold tracking-[-2.5px] leading-[56px];
+    @apply text-dark-navy text-[56px] font-space-mono font-bold tracking-[-2.5px] leading-[56px];
   }
   .heading-2 {
-    @apply text-dark text-[48px] font-space-mono font-bold tracking-[-2.14px] leading-[48px];
+    @apply text-dark-navy text-[48px] font-space-mono font-bold tracking-[-2.14px] leading-[48px];
   }
   .heading-3 {
-    @apply text-dark text-[40px] font-space-mono font-bold tracking-[-1.79px] leading-[48px];
+    @apply text-dark-navy text-[40px] font-space-mono font-bold tracking-[-1.79px] leading-[48px];
   }
   .heading-4 {
-    @apply text-dark text-[24px] font-space-mono font-bold tracking-[-1.07px] leading-[28px];
+    @apply text-dark-navy text-[24px] font-space-mono font-bold tracking-[-1.07px] leading-[28px];
   }
   .text-style {
-    @apply text-dark text-[15px] font-lexend-deca font-normal leading-[25px];
+    @apply text-dim-grey text-[15px] font-lexend-deca font-normal leading-[25px];
+  }
+
+  .container {
+    @apply lg:!max-w-7xl !max-w-full px-12 mx-auto;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .flex-start {
+    @apply flex justify-start items-start;
+  }
+  .flex-end {
+    @apply flex justify-end items-end;
+  }
+  .flex-between {
+    @apply flex justify-between items-center;
   }
 }

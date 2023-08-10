@@ -1,15 +1,15 @@
 import React from 'react'
 
 export const metadata = {
-  title: 'About Page',
+  title: 'Locations Page',
 }
 
-const About = () => {
+const Locations = () => {
   return (
     <div>
-      <h1>About</h1>
+      <h1>Location</h1>
     </div>
   )
 }
 
-export default About
+export default Locations

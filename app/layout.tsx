@@ -2,14 +2,21 @@ import './globals.css'
 import { Navbar, Footer } from '@/components'
 
 export const metadata = {
-  title: 'Scoot',
+  title: {
+    default: 'Scoot',
+    template: '%s | Scoot',
+  },
   description: 'Scoot - Web template',
 }
 
-export const RootLayout = ({ children }: { children: React.ReactNode }) => {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body>
+      <body className="w-full flex-col overflow-x-hidden">
         <Navbar />
         <main>{children}</main>
         <Footer />
@@ -17,5 +24,3 @@ export const RootLayout = ({ children }: { children: React.ReactNode }) => {
     </html>
   )
 }
-
-export default RootLayout
