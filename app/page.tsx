@@ -1,98 +1,110 @@
+import Image from 'next/image'
+
 import { Hero, Button } from '@/components'
 import { features, services } from '@/constants'
 
-const Home = () => {
+type Service = {
+  object: {
+    key: string
+    image: string
+    title: string
+    description: string
+  }
+  reversed: boolean
+}
+
+const Services = ({ object, reversed }: Service) => {
+  const { key, image, title, description } = object
+
   return (
-    <div className="w-full flex flex-col overflow-x-hidden">
+    <div
+      className={
+        reversed
+          ? 'flex-between relative flex-col gap-14 lg:flex-row-reverse'
+          : 'flex-between relative flex-col gap-14 lg:flex-row'
+      }
+    >
+      <div className="flex-center flex-row">
+        <span className="relative aspect-square max-w-[28rem] overflow-hidden rounded-full">
+          <Image
+            src={image}
+            alt={key}
+            width={500}
+            height={500}
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+        </span>
+        <span
+          className={
+            reversed
+              ? 'absolute -mr-[65rem] hidden aspect-square w-[28rem] rounded-full bg-light-grey md:flex'
+              : 'absolute -ml-[65rem] hidden aspect-square w-[28rem] rounded-full bg-light-grey md:flex'
+          }
+        ></span>
+      </div>
+      <article className="lg:flex-start flex-center flex max-w-[40rem] flex-col gap-6 text-center lg:max-w-[32rem] lg:text-start">
+        <h2 className="heading-2 max-w-[30rem]">{title}</h2>
+        <p className="text-style mb-4">{description}</p>
+        <Button title={'Learn more service button'} href={'#'}>
+          learn more
+        </Button>
+      </article>
+    </div>
+  )
+}
+
+const HomePage = () => {
+  return (
+    <>
       <Hero />
       {/* features section */}
-      <section className="container flex-center py-24 mt-24 relative -z-10">
-        <div className="max-w-3xl grid lg:max-w-none lg:grid-cols-3 grid-cols-1 gap-10 relative">
-          <div className="bg-light-grey w-screen h-4 absolute top-10 right-80 lg:flex hidden"></div>
-          <div className="bg-light-grey w-4 h-screen absolute bottom-10 left-10 lg:hidden md:flex hidden"></div>
+      <section className="flex-center container relative -z-10 mt-24 py-24">
+        <div className="relative grid max-w-4xl grid-cols-1 gap-10 lg:max-w-none lg:grid-cols-3">
+          <span className="absolute right-80 top-10 hidden h-4 w-screen bg-light-grey lg:flex"></span>
+          <span className="absolute bottom-10 left-10 hidden h-screen w-4 bg-light-grey md:flex lg:hidden"></span>
           {features.map((feature) => {
             return (
               <div
                 key={feature.key}
-                className="lg:flex-start lg:flex-col md:flex-row flex-center flex-col lg:gap-10 md:gap-20 gap-10 z-10"
+                className="lg:flex-start flex-center z-10 flex-col gap-10 md:flex-row md:gap-20 lg:flex-col lg:gap-10"
               >
-                <img
-                  className="w-24 h-24"
-                  src={feature.icon}
-                  alt={feature.key}
-                />
-                <div className="flex-center md:flex-start flex-col gap-6">
+                <span className="relative aspect-square w-24">
+                  <Image
+                    src={feature.icon}
+                    alt={feature.key}
+                    width={96}
+                    height={96}
+                    className="h-full w-full object-cover"
+                  />
+                </span>
+                <article className="flex-center md:flex-start flex-1 flex-col gap-6">
                   <h4 className="heading-4">{feature.title}</h4>
-                  <p className="text-style md:text-start text-center">
+                  <p className="text-style text-center md:text-start">
                     {feature.description}
                   </p>
-                </div>
+                </article>
               </div>
             )
           })}
         </div>
       </section>
       {/* services section */}
-      <section className="container py-24 mb-24 -z-10">
+      <section className="container -z-10 mb-24 py-24">
         <div className="flex flex-col gap-40">
-          <div className="flex-between lg:flex-row-reverse flex-col gap-14 relative">
-            <div className="flex-center flex-row">
-              <div className="max-w-[28rem] aspect-square rounded-full overflow-hidden">
-                <img
-                  className="w-full h-full object-cover scale-110"
-                  src={services[0].image}
-                  alt={services[0].key}
-                />
-              </div>
-              <div className="w-[28rem] aspect-square bg-light-grey rounded-full absolute -mr-[65rem] md:flex hidden"></div>
-            </div>
-            <div className="flex flex-col gap-6 lg:max-w-[32rem] max-w-[40rem] lg:flex-start flex-center lg:text-start text-center">
-              <h2 className="heading-2 max-w-[30rem]">{services[0].title}</h2>
-              <p className="text-style mb-4">{services[0].description}</p>
-              <Button title={'learn more'} to={''} />
-            </div>
-          </div>
-
-          <div className="flex-between lg:flex-row flex-col gap-14 relative">
-            <div className="flex-center flex-row">
-              <div className="max-w-[28rem] aspect-square rounded-full overflow-hidden">
-                <img
-                  className="w-full h-full object-cover scale-110"
-                  src={services[1].image}
-                  alt={services[1].key}
-                />
-              </div>
-              <div className="w-[28rem] aspect-square bg-light-grey rounded-full absolute -ml-[65rem] md:flex hidden"></div>
-            </div>
-            <div className="flex flex-col gap-6 lg:max-w-[32rem] max-w-[40rem] lg:flex-start flex-center lg:text-start text-center">
-              <h2 className="heading-2 max-w-[30rem]">{services[1].title}</h2>
-              <p className="text-style mb-4">{services[1].description}</p>
-              <Button title={'learn more'} to={''} />
-            </div>
-            <div className="w-[28rem] h-[28rem] bg-light-grey rounded-full absolute -left-[34rem]"></div>
-          </div>
-
-          <div className="flex-between lg:flex-row-reverse flex-col gap-14 relative">
-            <div className="flex-center flex-row">
-              <div className="max-w-[28rem] aspect-square rounded-full overflow-hidden">
-                <img
-                  className="w-full h-full object-cover scale-110"
-                  src={services[2].image}
-                  alt={services[2].key}
-                />
-              </div>
-              <div className="w-[28rem] aspect-square bg-light-grey rounded-full absolute -mr-[65rem] md:flex hidden"></div>
-            </div>
-            <div className="flex flex-col gap-6 lg:max-w-[32rem] max-w-[40rem] lg:flex-start flex-center lg:text-start text-center">
-              <h2 className="heading-2 max-w-[30rem]">{services[2].title}</h2>
-              <p className="text-style mb-4">{services[2].description}</p>
-              <Button title={'learn more'} to={''} />
-            </div>
-          </div>
+          {services.map((service, index) => {
+            return (
+              <Services
+                key={service.key}
+                object={service}
+                reversed={index % 2 === 0 ? false : true}
+              />
+            )
+          })}
         </div>
       </section>
-    </div>
+    </>
   )
 }
 
-export default Home
+export default HomePage

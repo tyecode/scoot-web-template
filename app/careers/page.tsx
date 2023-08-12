@@ -4,12 +4,12 @@ export const metadata = {
   title: 'Careers Page',
 }
 
-const Careers = () => {
+const CareersPage = () => {
   return (
-    <div>
+    <>
       <h1>Careers</h1>
-    </div>
+    </>
   )
 }
 
-export default Careers
+export default CareersPage
