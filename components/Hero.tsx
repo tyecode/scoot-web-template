@@ -1,14 +1,19 @@
+import Image from 'next/image'
+
+import { Button } from '.'
 import { hero } from '@/constants'
-import Button from './Button'
 
 const Hero = () => {
   return (
-    <section className="flex-center relative h-[46rem] w-full">
+    <section className="flex-center relative mt-24 h-[46rem] w-full">
       <div className="flex-center absolute left-0 top-0 h-full w-full overflow-hidden">
-        <img
-          className="h-full w-full object-cover"
+        <Image
           src={hero.image}
           alt={hero.title}
+          sizes="100vh"
+          fill={true}
+          priority={true}
+          className="h-full w-full object-cover"
         />
       </div>
 
@@ -20,7 +25,9 @@ const Hero = () => {
           <p className="text-style max-w-[40rem] text-center text-light lg:ml-[5.3rem] lg:max-w-[26rem] lg:text-start">
             {hero.description}
           </p>
-          <Button title={'Get Scootin'} to={''}></Button>
+          <Button title={'Hero scootin button'} href={'#'}>
+            get scootin
+          </Button>
         </div>
 
         <div className="absolute -left-[20rem] top-[11.2rem] flex flex-row md:-left-[6rem] lg:left-[36rem] lg:top-4">

@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Image from 'next/image'
+
 import { appStores, navLinks, socialMedia } from '@/constants'
 
 const Footer = () => {
@@ -9,11 +11,21 @@ const Footer = () => {
           <h2 className="heading-2 z-10 max-w-[30rem] text-center text-light lg:text-start">
             Sign up and Scoot off today
           </h2>
-          <div className="flex-center z-10 flex-row gap-6">
+          <div className="flex-center z-10 flex-row gap-4">
             {appStores.map((store) => {
               return (
-                <Link key={store.key} href={store.href}>
-                  <img src={store.icon} alt={store.title} />
+                <Link
+                  key={store.key}
+                  href={store.href}
+                  className="relative h-14 w-48"
+                >
+                  <Image
+                    src={store.icon}
+                    alt={store.title}
+                    sizes="100vh"
+                    fill={true}
+                    className="h-full w-auto object-contain"
+                  />
                 </Link>
               )
             })}
@@ -26,7 +38,7 @@ const Footer = () => {
           <div className="flex-center flex-col gap-14 md:flex-row">
             {/* logo */}
             <h3 className="heading-3 lowercase text-light">
-              <Link href={'/'}>Scoot</Link>
+              <Link href={'#'}>Scoot</Link>
             </h3>
             <div className="flex-center flex-col gap-8 md:flex-row">
               {navLinks.map((link) => {
@@ -45,8 +57,18 @@ const Footer = () => {
           <div className="flex-center gap-8 py-8 md:py-0">
             {socialMedia.map((social) => {
               return (
-                <Link key={social.key} href={social.href}>
-                  <img src={social.icon} alt={social.title} />
+                <Link
+                  key={social.key}
+                  href={social.href}
+                  className="relative h-6 w-6"
+                >
+                  <Image
+                    src={social.icon}
+                    alt={social.title}
+                    sizes="100vh"
+                    fill={true}
+                    className="h-full w-full object-contain"
+                  />
                 </Link>
               )
             })}

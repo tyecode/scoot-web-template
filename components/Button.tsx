@@ -1,23 +1,27 @@
 import Link from 'next/link'
 
 type Props = {
+  children: React.ReactNode
   title: string
-  to: string
+  href: string
   className?: string
   onClick?: VoidFunction
 }
 
-const Button = ({ title, to, className, onClick }: Props) => {
+const Button = (Props: Props) => {
+  const { children, title, href, className, onClick } = Props
+
   return (
     <button
+      title={title}
       onClick={onClick}
-      className={`flex-center h-[3.3125rem] w-[11.25rem] bg-primary ${className}`}
+      className={`flex-center h-[3.3125rem] w-[11.25rem] cursor-pointer bg-primary ${className}`}
     >
       <Link
-        href={to}
-        className="text-style font-space-mono font-bold capitalize text-white"
+        href={href}
+        className="flex-center text-style h-full w-full font-space-mono font-bold capitalize text-white"
       >
-        {title}
+        {children}
       </Link>
     </button>
   )
