@@ -46,9 +46,6 @@ const Services = ({ object, reversed }: Service) => {
       <article className="lg:flex-start flex-center flex max-w-[40rem] flex-col gap-6 text-center lg:max-w-[32rem] lg:text-start">
         <h2 className="heading-2 max-w-[30rem]">{title}</h2>
         <p className="text-style mb-4">{description}</p>
-        <Button title={'Learn more service button'} href={'#'}>
-          learn more
-        </Button>
       </article>
     </div>
   )

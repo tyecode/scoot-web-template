@@ -99,3 +99,99 @@ export const services = [
     description: `Our payment is as easy as one two three. We accept most credit cards and debit cards. You can also link your PayPal account inside the app. Need to pay later? No worries! You can defer payment for up to a month.`,
   },
 ]
+
+
+// About data page
+
+export const shareHero = [
+  {
+    title: "About",
+    image: 'images/header-01.jpg',
+  },
+  {
+    title: "Careers",
+    image: 'images/header-02.jpg',
+  },
+  {
+    title: "Locations",
+    image: 'images/header-02.jpg',
+  },
+]
+
+export const aboutPageServices = [
+  {
+    key: 'services-1',
+    image: '/images/about-01.jpg',
+    title: 'Mobility for the digital era',
+    description: `Getting around should be simple (and event fun!)
+    for everyone. We embrace technology to provide low cost, smart access to scooters at your fingertips`
+  },
+  {
+    key: 'services-2',
+    image: '/images/about-02.jpg',
+    title: 'Better urban living', 
+    description: `We’re helping connect cities and bring people closer together. Our scooters are also fully-electric and we offset the minimal carbon footprint for each ride.`
+  }
+]
+
+export const thumbnailInfo = [
+  {
+    index: '01',
+    image: '/images/values-01.jpg',
+    key: 'img-phone',
+    title: 'Our tech',
+    description: `We’re using cutting edge technology to drive accessible urban transportation forward. Our fully electric scooters are a joy to ride!`
+   },
+  {
+    index: '02',
+    image: '/images/values-02.jpg',
+    key: 'img-motobike',
+    title: 'Our integrity',
+    description: `We are fully committed to deliver a great yet safe, sustainable micro-mobility experience in every city we serve.`
+   },
+  {
+    index: '03',
+    image: '/images/values-03.jpg',
+    key: 'img-people',
+    title: 'Our community',
+    description: `We support every community we serve. All workers are paid a living wage based on their location and are Scoot employees.`
+   }
+]
+ 
+
+export const accordionInfo = [
+  {
+    dataOne: [
+      {
+        title: 'How do i download app?',
+        description: `To download the Scoot app, you can search “Scoot” in both the App and Google Play stores. An even simpler way to do it would be to click the relevant link at the bottom of this page and you’ll be re-directed to the correct page.` 
+      },
+      {
+        title: 'Can i find a nearby Scoots?',
+        description: `To download the Scoot app, you can search “Scoot” in both the App and Google Play stores. An even simpler way to do it would be to click the relevant link at the bottom of this page and you’ll be re-directed to the correct page.` 
+      },
+      {
+        title: 'Do i need a license to ride?',
+        description: `To download the Scoot app, you can search “Scoot” in both the App and Google Play stores. An even simpler way to do it would be to click the relevant link at the bottom of this page and you’ll be re-directed to the correct page.` 
+      },
+    ],
+  },
+  {
+    dataTwo :[
+      {
+        title: 'Should i wear a helmet?',
+        description: `Yes, please do! All cities have different laws. But we strongly strongly strongly recommend always wearing a helmet regardless of the local laws. We like you and we want you to be as safe as possible while Scooting.` 
+      },
+      {
+        title: 'How about the rules & regulations?',
+        description: `To download the Scoot app, you can search “Scoot” in both the App and Google Play stores. An even simpler way to do it would be to click the relevant link at the bottom of this page and you’ll be re-directed to the correct page.` 
+      },
+      {
+        title: 'What if i damage my scoot?',
+        description: `To download the Scoot app, you can search “Scoot” in both the App and Google Play stores. An even simpler way to do it would be to click the relevant link at the bottom of this page and you’ll be re-directed to the correct page.` 
+      },
+    ]
+  }
+  
+]
+
