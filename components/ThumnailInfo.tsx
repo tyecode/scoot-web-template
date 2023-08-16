@@ -24,9 +24,9 @@ const ThumnailInfo = ({ object }: ThumnailInfoProps) => {
         />
         <h1 className='absolute -bottom-10 bg-primary flex-center font-space-mono w-[80px] h-[80px] rounded-full'>{index}</h1>
       </div>
-      <div className="max-w-[350px] text-center p-4 mt-4">
+      <div className="max-w-[28rem] text-center p-4 mt-4">
       <h1 className='heading-3 my-4'>{title}</h1>
-      <p className='text-style'>{description}</p>
+      <p className='text-style '>{description}</p>
       </div>
     </div>
   )

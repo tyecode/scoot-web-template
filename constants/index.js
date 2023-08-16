@@ -101,7 +101,7 @@ export const services = [
 ]
 
 
-// About data page
+// About page data
 
 export const shareHero = [
   {
@@ -110,11 +110,11 @@ export const shareHero = [
   },
   {
     title: "Careers",
-    image: 'images/header-02.jpg',
+    image: 'images/header-03.png',
   },
   {
     title: "Locations",
-    image: 'images/header-02.jpg',
+    image: 'images/header-03.png',
   },
 ]
 
@@ -195,3 +195,63 @@ export const accordionInfo = [
   
 ]
 
+// Careers page data
+
+export const careerPageServices = {
+  image: '/images/careers.jpg',
+  key: 'waitor',
+  title: 'Care to join our mission?',
+  description: `We’re always looking for ambitious individuals to help us on our journey. If you’re passionate about our mission to provide clean, accessible transport to improve urban living we want to hear from you!`
+}
+
+export const thumnailCareerPage = [
+  {
+    index: '01',
+    image: '/images/values-01.jpg',
+    key: 'img-phone',
+    title: 'Our tech',
+    description: `We’re using cutting edge technology to drive accessible urban transportation forward. Our fully electric scooters are a joy to ride!`
+   },
+  {
+    index: '02',
+    image: '/images/values-02.jpg',
+    key: 'img-motobike',
+    title: 'Our integrity',
+    description: `We are fully committed to deliver a great yet safe, sustainable micro-mobility experience in every city we serve.`
+   },
+  {
+    index: '03',
+    image: '/images/values-03.jpg',
+    key: 'img-people',
+    title: 'Our community',
+    description: `We support every community we serve. All workers are paid a living wage based on their location and are Scoot employees.`
+   }
+];
+
+
+export const listServices = [
+  {
+    title: 'General Manager',
+    name: 'Jakarta, Indonesia'
+  },
+  {
+    title: 'UI/UX Designer',
+    name: 'Yokohama, Japan'
+  },
+  {
+    title: 'Blog Content Copywriter ',
+    name: 'New York, United States'
+  },
+  {
+    title: 'Graphic Designer',
+    name: 'New York, United States'
+  },
+  {
+    title: 'Fleet Supervisor',
+    name: 'Jakarta, Indonesia'
+  },
+  {
+    title: 'UX Analyst',
+    name: 'London, United Kingdom'
+  }
+];

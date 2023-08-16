@@ -25,7 +25,7 @@ const Accordion = ({ object }: AccordionProps) => {
   const { title, description } = object;
   return (
     <div className='p-4 cursor-pointer ease-out duration-300 hover:bg-[#FFF4DF] bg-[#e5ecf4] flex flex-col' onClick={()=> setIsActive(isActive => !isActive)}>
-      <div className="flex justify-between items-center gap-3 ">
+      <div className="flex flex-between gap-3 ">
         <span className='heading-4'>{title}</span>
         <span className={isActive ? 'rotate-80' : 'rotate-180'}>
           <svg width="20" height="20" viewBox="0 0 50 33" fill='none' xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +77,7 @@ const AboutPage = () => {
         </div>
       </section>
       
-      <section className="container overflow-scroll no-scrollbar  -z-10 mb-24 py-4">
+      <section className="container overflow-scroll no-scrollbar  -z-10 mb-24 py-24">
         <div className="flex relative flex-col-reverse md:items-center lg:flex-row-reverse lg:items-center gap-10">
           <article className="lg:flex-start flex-center flex max-w-[40rem] flex-col gap-6 text-center lg:max-w-[32rem] lg:text-start">
         <h2 className="heading-2 max-w-[30rem]">{aboutPageServices[0].title}</h2>
@@ -102,17 +102,21 @@ const AboutPage = () => {
         </div>
       </section>
       {/* thumnail section */}
-      <section className="container -z-10 ">
+      <section className="container -z-10 py-24">
+        
         <div className="flex flex-col justify-center items-center">
           <h1 className='heading-1'>Our values</h1>
-          <div className="mt-8 md:flex md:px-4 gap-5">
+          <div className="mt-8 lg:flex md:px-4 gap-5">
             {thumbnailInfo.map((value) => <ThumnailInfo object={value} />)}
           </div>
         </div>
       </section>
-      <section className='container -z-10 mb-2 py-4'>
+      
+      {/* accordion one section */}
+      <section className='container -z-10 mb-2 py-24'>
+        <h1 className='heading-1 text-center mb-8'>FAQs</h1>
         <div className="max-w-full  mx-auto flex flex-col items-center p-4">
-          <div className="w-full gap-6 md:flex">
+          <div className="w-full gap-6 lg:flex">
           <h1 className='heading-1 text-center flex-none mt-4'>How it works</h1>   
           <div className="flex flex-col gap-6 mt-8 w-full">
           {accordionInfo[0].dataOne?.map((value) => <Accordion object={value}/>)}
@@ -120,9 +124,11 @@ const AboutPage = () => {
           </div>
           </div>
       </section>
+
+      {/* accordion two section */}
       <section className='container -z-10 mb-8 py-4'>
         <div className="max-w-full mb-8  mx-auto flex flex-col items-center p-4">
-          <div className="w-full gap-6 md:flex">
+          <div className="w-full gap-6 lg:flex">
           <h1 className='heading-1 text-center flex-none mt-4'>Safe driving</h1>   
           <div className="flex flex-col gap-6 mt-8 w-full">
           {accordionInfo[1].dataTwo?.map((value) => <Accordion object={value}/>)}
