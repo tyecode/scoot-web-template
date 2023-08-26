@@ -1,5 +1,5 @@
 import './globals.css'
-import { Navbar, Footer } from '@/components'
+import { Header, Footer } from '@/components'
 
 export const metadata = {
   title: {
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="w-full flex-col overflow-x-hidden">
-        <Navbar />
+        <Header />
         <main>{children}</main>
         <Footer />
       </body>

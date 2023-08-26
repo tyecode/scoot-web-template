@@ -4,8 +4,8 @@ import React from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 
-import { navLinks } from '@/constants'
 import { Button } from '.'
+import { navLinks } from '@/constants'
 
 const Navbar = () => {
   const [isActive, setActive] = React.useState<boolean>(false)
@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="md:flex-between flex-center container flex-row">
           <div className="flex flex-row items-center gap-14">
             {/* logo */}
-            <h3 className="heading-3 z-10 lowercase">
+            <h3 className="heading-3 z-10 text-[2.5rem] lowercase">
               <Link
                 suppressHydrationWarning={true}
                 onClick={() => setActive(false)}

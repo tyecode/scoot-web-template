@@ -11,20 +11,20 @@ const Footer = () => {
           <h2 className="heading-2 z-10 max-w-[30rem] text-center text-light lg:text-start">
             Sign up and Scoot off today
           </h2>
-          <div className="flex-center z-10 flex-row gap-4">
+          <div className="flex-center z-10 gap-4 sm:flex-row">
             {appStores.map((store) => {
               return (
                 <Link
                   key={store.key}
                   href={store.href}
-                  className="relative h-14 w-48"
+                  className="h-14 max-w-[11.5rem]"
                 >
                   <Image
                     src={store.icon}
                     alt={store.title}
-                    sizes="100vh"
-                    fill={true}
-                    className="h-full w-auto object-contain"
+                    width={180}
+                    height={56}
+                    className="h-full w-full object-contain"
                   />
                 </Link>
               )
@@ -37,7 +37,7 @@ const Footer = () => {
         <div className="flex-between container flex-col gap-10 md:flex-row">
           <div className="flex-center flex-col gap-14 md:flex-row">
             {/* logo */}
-            <h3 className="heading-3 lowercase text-light">
+            <h3 className="heading-3 text-[2.5rem] lowercase text-light">
               <Link href={'#'}>Scoot</Link>
             </h3>
             <div className="flex-center flex-col gap-8 md:flex-row">
