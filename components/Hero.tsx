@@ -1,15 +1,15 @@
 import Image from 'next/image'
 
 import { Button } from '.'
-import { hero } from '@/constants'
+import { headers } from '@/constants'
 
 const Hero = () => {
   return (
-    <section className="flex-center relative mt-24 h-[46rem] w-full">
+    <section className="flex-center relative h-[46rem] w-full">
       <div className="flex-center absolute left-0 top-0 h-full w-full overflow-hidden">
         <Image
-          src={hero.image}
-          alt={hero.title}
+          src={headers[0].image}
+          alt={headers[0].title}
           sizes="100vh"
           fill={true}
           priority={true}
@@ -20,10 +20,10 @@ const Hero = () => {
       <div className="lg:flex-start flex-center container relative !items-center">
         <div className="lg:flex-start flex-center absolute w-fit flex-col gap-10">
           <h1 className="heading-1 max-w-[30rem] text-center text-light lg:text-start">
-            {hero.title}
+            {headers[0].title}
           </h1>
           <p className="text-style max-w-[40rem] text-center text-light lg:ml-[5.3rem] lg:max-w-[26rem] lg:text-start">
-            {hero.description}
+            {headers[0].description}
           </p>
           <Button title={'Hero scootin button'} href={'#'}>
             get scootin
@@ -65,9 +65,9 @@ const Hero = () => {
       </div>
 
       <div className="md:flex-center absolute -right-8 bottom-[3rem] hidden flex-row gap-8 lg:bottom-[13rem]">
-        <div className="aspect-square w-16 rounded-full border border-x-[.188rem] border-y-[.188rem] border-light"></div>
-        <div className="aspect-square w-16 rounded-full border border-x-[.188rem] border-y-[.188rem] border-light"></div>
-        <div className="aspect-square w-16 rounded-full bg-light"></div>
+        <span className="aspect-square w-16 rounded-full border border-x-[.188rem] border-y-[.188rem] border-light"></span>
+        <span className="aspect-square w-16 rounded-full border border-x-[.188rem] border-y-[.188rem] border-light"></span>
+        <span className="aspect-square w-16 rounded-full bg-light"></span>
       </div>
     </section>
   )

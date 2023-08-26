@@ -27,37 +27,21 @@ img {
   pointer-events: none;
 }
 
-@layer utilities {
-  @variants responsive {
-    /* Hide scrollbar for Chrome, Safari, and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-
-    /* Hide scrollbar for IE, Edge, and Firefox */
-    .no-scrollbar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
-  }
-}
-
 @layer base {
   .heading-1 {
-    @apply font-space-mono text-[56px] font-bold leading-[56px] tracking-[-2.5px] text-dark-navy;
+    @apply font-space-mono text-[2.5rem] font-bold leading-[3.5rem] tracking-[-.156rem] text-dark-navy md:text-[3.5rem];
   }
   .heading-2 {
-    @apply font-space-mono text-[48px] font-bold leading-[48px] tracking-[-2.14px] text-dark-navy;
+    @apply font-space-mono text-[2rem] font-bold leading-[3rem] tracking-[-.134rem] text-dark-navy md:text-[3rem];
   }
   .heading-3 {
-    @apply font-space-mono text-[40px] font-bold leading-[48px] tracking-[-1.79px] text-dark-navy;
+    @apply font-space-mono text-[1.5rem] font-bold leading-[3rem] tracking-[-.112rem] text-dark-navy md:text-[2.5rem];
   }
   .heading-4 {
-    @apply font-space-mono text-[24px] font-bold leading-[28px] tracking-[-1.07px] text-dark-navy;
+    @apply font-space-mono text-[1.125rem] font-bold leading-[1.75rem] tracking-[-.067] text-dark-navy md:text-[1.5rem];
   }
   .text-style {
-    @apply font-lexend-deca text-[15px] font-normal leading-[25px] text-dim-grey;
+    @apply font-lexend-deca text-[.9375rem] font-normal leading-[1.563rem] text-dim-grey;
   }
 
   .container {
